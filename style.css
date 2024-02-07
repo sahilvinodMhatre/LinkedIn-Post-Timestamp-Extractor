@@ -1,0 +1,53 @@
+body {
+    background-color: #ebebba;
+}
+
+p {
+    display: inline;
+    font-size: large;
+}
+
+input:focus {
+    outline: none;
+}
+
+input {
+    margin-top: 40px;
+    width: 60%;
+    /* height: 30px; */
+    border-radius: 20px;
+    padding: 15px;
+    color: darkturquoise;
+    background-color: black;
+}
+
+button {
+    background-color: springgreen;
+    /* height: 30px; */
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+
+
+}
+
+
+#result {
+    color: #20C20E;
+    background-color: black;
+    width: 80%;
+    border-radius: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 15px;
+    font-family: 'Hack', monospace;
+}
+
+#Output {
+    color: white;
+}
+
+#GMTime {
+    padding-bottom: 15px;
+
+}

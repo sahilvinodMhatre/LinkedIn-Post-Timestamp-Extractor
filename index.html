@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Post Timestamp Extractor</title>
+    <meta name="description" content="A tool to extract timestamps from LinkedIn posts.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hack&display=swap">
+</head>
+
+<body>
+    <center>
+        <h1>LinkedIn Post Timestamp Extractor</h1>
+
+        <p> Link:</p> <input type="text" placeholder="Paste your link here" id="link">
+        <button onclick="start()">submit</button>
+        <br> <br>
+        <div id="result">
+            <p id="Output"> Output:</p> <br> <br>
+            <div id="localTime"></div> <br>
+            <div id="GMTime"></div>
+        </div>
+    </center>
+    <script src="./Date-extractor.js"></script>
+</body>
+
+</html>

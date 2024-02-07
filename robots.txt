@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /Date-extractor.js
+
