@@ -14,12 +14,18 @@ function start() {
     }
 
     function extractID() {
+
+        try{ 
         const linkedinURL = document.querySelector("#link").value;
         const regex = /([0-9]{19})/;
         const postId = regex.exec(linkedinURL).pop();
         console.log(postId)
         return postId;
+    } catch (error) {
+         alert("Invalid link! Please provide a valid LinkedIn post link")
     }
+    }
+
 
     function convertEpochToLocalTime(epochTime) {
 
