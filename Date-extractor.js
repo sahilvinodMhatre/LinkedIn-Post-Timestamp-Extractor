@@ -15,15 +15,15 @@ function start() {
 
     function extractID() {
 
-        try{ 
-        const linkedinURL = document.querySelector("#link").value;
-        const regex = /([0-9]{19})/;
-        const postId = regex.exec(linkedinURL).pop();
-        console.log(postId)
-        return postId;
-    } catch (error) {
-         alert("Invalid link! Please provide a valid LinkedIn post link")
-    }
+        try {
+            const linkedinURL = document.querySelector("#link").value;
+            const regex = /([0-9]{19})/;
+            const postId = regex.exec(linkedinURL).pop();
+
+            return postId;
+        } catch (error) {
+            alert("Invalid link! Please provide a valid LinkedIn post link")
+        }
     }
 
 
@@ -38,7 +38,7 @@ function start() {
 
     function convertEpochToGMT(epochTime) {
         let gtime = new Date(epochTime);
-        console.log(gtime.toGMTString())
+
         let time = gtime.toGMTString()
         return time;
     }
@@ -48,10 +48,8 @@ function start() {
     // console.log(bigIntToBinary(bigIntNumber)); 
     let First41 = bigIntToBinary(PostID).substring(0, 41)
     let Epoch = parseInt(First41, 2);
-    console.log(Epoch)
     let localTime = convertEpochToLocalTime(Epoch);
     let GMTime = convertEpochToGMT(Epoch)
-    console.log("Local Time:", localTime);
     document.getElementById("localTime").innerText = "As per Your timezone: " + localTime;
     document.getElementById("GMTime").innerText = "GMT: " + GMTime;
 
