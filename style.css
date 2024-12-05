@@ -1,46 +1,80 @@
 body {
-    background-color: #ebebba;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(-45deg, #ff6ec4, #7873f5, #5ce1e6, #fcb045);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+center {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent container */
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
 }
 
 p {
-    display: inline;
+    display: block;
     font-size: large;
-}
-
-input:focus {
-    outline: none;
+    margin-bottom: 10px;
+    color: white;
 }
 
 input {
-    margin-top: 40px;
-    width: 60%;
-    /* height: 30px; */
+    margin-top: 10px;
+    width: 100%;
     border-radius: 20px;
     padding: 15px;
     color: darkturquoise;
     background-color: black;
+    border: 1px solid springgreen;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+    margin-bottom: 20px; /* Adds spacing below the input */
 }
 
 button {
     background-color: springgreen;
-    /* height: 30px; */
+    border-color: #00ff7f;
     border-radius: 15px;
-    padding: 15px;
+    padding: 15px 30px;
     text-align: center;
-
-
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px; /* Adds space above the button */
+    margin-bottom: 20px; /* Adds space below the button */
+    display: block;
 }
-
 
 #result {
     color: #20C20E;
     background-color: black;
-    width: 80%;
+    width: 100%;
     border-radius: 15px;
-    margin-top: 10px;
+    padding: 20px;
     font-weight: bold;
-    padding: 15px;
     font-family: 'Hack', monospace;
+    margin-top: 20px; /* Adds space above the result */
+    box-sizing: border-box;
+    overflow-wrap: break-word;
 }
 
 #Output {
@@ -49,5 +83,4 @@ button {
 
 #GMTime {
     padding-bottom: 15px;
-
 }
